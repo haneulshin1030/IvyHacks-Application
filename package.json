@@ -14,7 +14,7 @@
     "browserify-ngannotate": "^2.0.0",
     "csv-express": "^1.2.2",
     "dotenv": "^6.2.0",
-    "email-templates": "^5.1.0",
+    "email-templates": "^7.1.0",
     "express": "^4.17.1",
     "gulp-buffer": "0.0.2",
     "gulp-tap": "^1.0.1",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-ng-annotate": "^2.1.0",
@@ -56,8 +56,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "jest": "^24.9.0",
-    "nodemon": "^1.19.4",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
     "pa11y-ci": "^2.3.0",
     "supertest": "^4.0.2"
   },
