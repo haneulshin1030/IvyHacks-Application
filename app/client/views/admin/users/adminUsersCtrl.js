@@ -279,6 +279,13 @@ angular.module('reg')
                 name: 'Name',
                 value: user.profile.name
               },{
+                name: 'Timezone',
+                value: user.profile.timezone
+              },
+              {
+                name: 'Degree',
+                value: user.profile.degree
+              },{
                 name: 'Gender',
                 value: user.profile.gender
               },{
@@ -288,12 +295,27 @@ angular.module('reg')
                 name: 'Graduation Year',
                 value: user.profile.graduationYear
               },{
+                name: 'Major',
+                value: user.profile.major
+              },{
+                name: 'Experience',
+                value: user.profile.experience
+              },{
+                name: 'Tracks',
+                value: user.profile.tracks
+              },{
                 name: 'Description',
                 value: user.profile.description
               },{
-                name: 'Essay',
-                value: user.profile.essay
-              }
+                name: 'Background',
+                value: user.profile.background
+              },{
+                name: 'Proud',
+                value: user.profile.proud
+              },{
+                name: 'WhyIvyHacks',
+                value: user.profile.whyivyhacks
+              },
             ]
           },{
             name: 'Confirmation',

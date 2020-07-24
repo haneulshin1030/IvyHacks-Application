@@ -1,5 +1,6 @@
 const angular = require("angular");
 const swal = require("sweetalert");
+const { lastIndexOf } = require("underscore");
 
 angular.module('reg')
   .controller('ApplicationCtrl', [
@@ -16,11 +17,11 @@ angular.module('reg')
       // Set up the user
       $scope.user = currentUser.data;
 
-      // Is the student from MIT?
-      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
+      // Is the student a student (email ends in .edu)
+      $scope.isStudent = $scope.user.email.substring($scope.user.email.lastIndexOf(".")) == '.edu';
 
       // If so, default them to adult: true
-      if ($scope.isMitStudent){
+      if ($scope.isStudent){
         $scope.user.profile.adult = true;
       }
 
@@ -117,6 +118,15 @@ angular.module('reg')
                 }
               ]
             },
+            degree: {
+              identifier: 'degree',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter the lastest degree you\'re in the process of completing.'
+                }
+              ]
+            },
             school: {
               identifier: 'school',
               rules: [
@@ -135,12 +145,21 @@ angular.module('reg')
                 }
               ]
             },
-            gender: {
-              identifier: 'gender',
+            major: {
+              identifier: 'major',
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please select a gender.'
+                  prompt: 'Please add your current majors and/or minor.'
+                }
+              ]
+            },
+            tracks: {
+              identifier: 'tracks',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please choose a track that you are most interested in.'
                 }
               ]
             },

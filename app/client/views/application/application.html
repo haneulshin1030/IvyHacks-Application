@@ -27,6 +27,32 @@
                  ng-model="user.profile.name">
         </div>
 
+        <div class="field">
+          <label>Time Zone</label>
+          <select
+            name="timezone"
+            ng-model="user.profile.timezone">
+            <option value="">Time Zone</option>
+            <option value="EDT">Eastern (ESDT)</option>
+            <option value="CDT">Central (CDT)</option>
+            <option value="MDT">Mountain (MDT)</option>
+            <option value="PDT">Pacific (PDT)</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Highest Degree Completed (or in the process of completing)</label>
+          <select
+            name="degree"
+            ng-model="user.profile.degree">
+            <option value="High School">High School</option>
+            <option value="Associate's Degree">Associate's Degree</option>
+            <option value="Bachelor's Degree">Bachelor's Degree</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
         <div class="field" ng-show="autoFilledSchool">
           <label> School </label>
           <input class="ui input"
@@ -51,15 +77,23 @@
             name="year"
             ng-model="user.profile.graduationYear">
             <option value="">Graduation Year</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
-            <option value="2019">2019</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="other">other</option>
           </select>
         </div>
 
         <div class="field">
-          <label>Gender</label>
+          <label> Major/Minor </label>
+          <input type="text"
+                 name="major"
+                 ng-model="user.profile.major">
+        </div>
+
+        <div class="field">
+          <label>Gender (Optional)</label>
           <select
             name="gender"
             ng-model="user.profile.gender">
@@ -72,6 +106,58 @@
         </div>
 
         <div class="field">
+          <label>Race/Ethnicity (Optional)</label>
+          <select
+            name="race"
+            ng-model="user.profile.race">
+            <option value="">Race/Ethnicity</option>
+            <option value="I">American Indian or Alaska Native</option>
+            <option value="A">Asian</option>
+            <option value="B">Black or African American</option>
+            <option value="N">Native Hawaiian or Other Pacific Islander</option>
+            <option value="W">White</option>
+            <option value="O">Other</option>
+            <option value="P">I prefer not to answer</option>
+          </select>
+        </div>
+
+        <div class="divided title">Interests and Experience</div>
+
+        <div class="field">
+          <label>How many hackathons have you been to before?</label>
+          <select
+            name="experience"
+            ng-model="user.profile.experience">
+            <option value="">Number of Hackathons</option>
+            <option value="F">This will be my first one!</option>
+            <option value="B">2-3</option>
+            <option value="I">3-4</option>
+            <option value="A">5 or more</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Which of the following tracks would you be most interested in (this is not at all a binding choice!)</label>
+          <select
+            name="tracks"
+            ng-model="user.profile.tracks">
+            <option value="">Tracks</option>
+            <option value="S">Social Issues</option>
+            <option value="H">Healthcare</option>
+            <option value="R">Remote Education and Work</option>
+            <option value="E">Envisioning a More Technologically Connected Future</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>
+              Describe your background in computer science
+          </label>
+          <textarea ng-model="user.profile.background">
+          </textarea>
+        </div>
+
+        <div class="field">
           <label>I would describe myself as a...</label>
           <input type="text"
                  placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
@@ -80,22 +166,33 @@
 
         <div class="field">
           <label>
-              What would you like to learn or get out of HackMIT? (optional)
+            What's something you've made that you're proud of?
           </label>
-          <textarea ng-model="user.profile.essay">
+          <textarea ng-model="user.profile.proud">
           </textarea>
+        </div>
+
+        <div class="field">
+          <label>
+              Why do you want to participate in IvyHacks 2020?
+          </label>
+          <textarea ng-model="user.profile.whyivyhacks">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label>If you already have a team in mind, list your teammates' names here!  If not, no worries, tell us about what you would be interested in learning/building</label>
+          <input type="text"
+                 placeholder="Team Names...."
+                 ng-model="user.profile.team">
         </div>
 
         <div class="field"
              ng-hide="isMitStudent">
           <p>
-            Because of limitations imposed by MIT, we are not legally allowed to host
-            non-MIT minors (those under 18) for HackMIT 2015. Checking the box below affirms that you are or will be 18 years or older by September 19th, 2015.
+            IvyHacks is geared towards college students.  Checking the box below affirms that you are or will be 18 years or older by October 1st, 2020.
           </p>
           <p>
-            <strong>
-            We will be checking ID. If you are a non-MIT minor, you will be turned away at the door.
-            </strong>
           </p>
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">

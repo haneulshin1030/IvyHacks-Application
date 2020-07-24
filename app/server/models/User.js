@@ -13,6 +13,17 @@ var profile = {
     max: 100,
   },
 
+  timezone: {
+    type: String,
+    enum: {
+      values: 'EDT CDT MDT PDT Other'.split(' '),
+    }
+  },
+
+  degree: {
+    type: String,
+  },
+
   adult: {
     type: Boolean,
     required: true,
@@ -32,16 +43,54 @@ var profile = {
     }
   },
 
+  major: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+
+  experience: {
+    type: String,
+    enum: {
+      values: 'F B I A'.split(' '),
+    }
+  },
+
+  tracks: {
+    type: String,
+    enum: {
+      values: 'S H R E'.split(' '),
+    }
+  },
+
   description: {
     type: String,
     min: 0,
     max: 300
   },
 
-  essay: {
+  background: {
     type: String,
     min: 0,
     max: 1500
+  },
+
+  proud: {
+    type: String,
+    min: 0,
+    max: 1500
+  },
+
+  whyivyhacks: {
+    type: String,
+    min: 0,
+    max: 1500
+  },
+
+  team: {
+    type: String,
+    min: 0,
+    max: 300
   },
 
   // Optional info for demographics
@@ -49,6 +98,14 @@ var profile = {
     type: String,
     enum : {
       values: 'M F O N'.split(' ')
+    }
+  },
+
+  // Optional info for demographics
+  race: {
+    type: String,
+    enum : {
+      values: 'I A B N W O P'.split(' ')
     }
   },
 
