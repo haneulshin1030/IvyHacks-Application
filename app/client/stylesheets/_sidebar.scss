@@ -2,7 +2,7 @@
   height: 100%;
   position: fixed;
   background: $sidebar-color;
-  color: white;
+  color: black;
   width: $sidebar-width;
   z-index: 999;
   overflow: auto;
@@ -34,6 +34,7 @@
     }
 
     &.logo {
+      background: $sidebar-color;
       opacity: 1;
       padding: 48px;
     }
