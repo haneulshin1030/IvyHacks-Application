@@ -24,11 +24,11 @@ var profile = {
     type: String,
   },
 
-  adult: {
-    type: Boolean,
-    required: true,
-    default: false,
-  },
+  // adult: {
+  //   type: Boolean,
+  //   required: true,
+  //   default: false,
+  // },
 
   school: {
     type: String,
@@ -39,7 +39,7 @@ var profile = {
   graduationYear: {
     type: String,
     enum: {
-      values: '2016 2017 2018 2019'.split(' '),
+      values: '2021 2022 2023 2024 Other'.split(' '),
     }
   },
 
