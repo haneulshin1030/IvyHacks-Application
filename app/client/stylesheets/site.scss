@@ -5,7 +5,7 @@ $font-header: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
 
 // Login screen variables
 $login-bg-color: red;
-$login-color: rgb(81, 189, 90);
+$login-color: darken($primary, 3%);
 $register-color: green;
 
 $status-unverified-color: rgb(82, 82, 82);
@@ -18,14 +18,16 @@ $status-waitlist-color: $tertiary;
 $status-declined-color: $tertiary;
 $status-rejected-color: red; // Not used
 
+// Button variable
+$button-color: lighten(black, 10%);// darken($primary, 3%);
 // Sidebar variables
-$sidebar-color: $primary;
+$sidebar-color: lighten($primary, 30%);
 $sidebar-width: 265px;
 $sidebar-transition-time: .5s;
 $sidebar-tab-size: 55px;
 
 // Page variables
-$page-header-color: $secondary;
+$page-header-color: lighten($secondary, 7%);
 
 $brand-primary: $primary;
 $brand-secondary: $secondary;

@@ -39,6 +39,7 @@
               <option value="High School">High School</option>
               <option value="Associate's Degree">Associate's Degree</option>
               <option value="Bachelor's Degree">Bachelor's Degree</option>
+              <option value="Graduate Degree">Bachelor's Degree</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -112,7 +113,6 @@
               <option value="A">5 or more</option>
             </select>
           </div>
-
           <div class="field">
             <label>Which of the following tracks would you be most interested in (this is not at all a binding
               choice!)</label>
@@ -125,18 +125,16 @@
             </select>
           </div>
 
+          <p>
+            Don't stress over the below short answer questions — we just want to get a feel of who you are and what
+            you're passionate about. 3 to 4 sentences for each questions is fine!
+          </p>
           <div class="field">
             <label>
-              Describe your background in computer science.
+              Briefly describe your background in computer science. What kinds of programming experiences have you had?
             </label>
             <textarea ng-model="user.profile.background">
-          </textarea>
-          </div>
-
-          <div class="field">
-            <label>I would describe myself as a...</label>
-            <input type="text" placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire, etc."
-              ng-model="user.profile.description">
+                    </textarea>
           </div>
 
           <div class="field">
@@ -144,7 +142,7 @@
               What's something you've made that you're proud of?
             </label>
             <textarea ng-model="user.profile.proud">
-          </textarea>
+                    </textarea>
           </div>
 
           <div class="field">
@@ -152,20 +150,20 @@
               Why do you want to participate in IvyHacks 2020?
             </label>
             <textarea ng-model="user.profile.whyivyhacks">
-          </textarea>
+                    </textarea>
           </div>
 
           <div class="field">
-            <label>If you already have a team in mind, list your teammates' names here. If not, no worries! Leave this
-              box blank, attended we'll match you with teammates based on the interests and experience level you
-              described above.</label>
+            <label>Each team can have at most four members. If you already have a team in mind, list your teammates'
+              names here. If not, no worries! Leave this box blank, and we'll match you with teammates based on the
+              interests and experience level you described above.</label>
             <input type="text" placeholder="Team Names...." ng-model="user.profile.team">
           </div>
 
           <br>
 
           <div class="field" ng-hide="regIsClosed">
-            <button type="submit" class="fluid ui green button" ng-click="submitForm()">
+            <button type="submit" class="fluid ui black button" ng-click="submitForm()">
               Submit
             </button>
           </div>

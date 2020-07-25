@@ -78,7 +78,7 @@
             {{ DASHBOARD.INCOMPLETE }}
           </p>
 
-          <div class="ui green button" ui-sref="app.application">
+          <div class="ui button" ui-sref="app.application">
             Complete your application
           </div>
 
@@ -97,11 +97,11 @@
             Edit your application
           </div>
 
-          <div class="ui pink button" ng-show="!user.teamCode" ui-sref="app.team">
+          <div class="ui green button" ng-show="!user.teamCode" ui-sref="app.team">
             Create or join a team
           </div>
 
-          <div class="ui pink button" ng-show="user.teamCode" ui-sref="app.team">
+          <div class="ui green button" ng-show="user.teamCode" ui-sref="app.team">
             View your Team
           </div>
 
@@ -127,7 +127,7 @@
             View your application
           </div>
 
-          <div class="ui pink button" ng-show="user.teamCode" ui-sref="app.team">
+          <div class="ui green button" ng-show="user.teamCode" ui-sref="app.team">
             View your Team
           </div>
         </div>

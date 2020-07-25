@@ -17,13 +17,12 @@ angular.module('reg')
       $scope.user = currentUser.data;
 
       // Is the student from MIT?
-      // $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
+      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
 
       // If so, default them to adult: true
-      // if ($scope.isMitStudent) {
-      //   $scope.user.profile.adult = true;
-      // }
-
+      if ($scope.isMitStudent) {
+        $scope.user.profile.adult = true;
+      }
 
       // Populate the school dropdown
       populateSchools();
@@ -118,12 +117,21 @@ angular.module('reg')
                 }
               ]
             },
+            timezone: {
+              identifier: 'timezone',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your timezone.'
+                }
+              ]
+            },
             degree: {
               identifier: 'degree',
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please enter the lastest degree you\'re in the process of completing.'
+                  prompt: 'Please enter the latest degree you\'re in the process of completing.'
                 }
               ]
             },
@@ -154,6 +162,24 @@ angular.module('reg')
                 }
               ]
             },
+            gender: {
+              identifier: 'gender',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please select a gender.'
+                }
+              ]
+            },
+            race: {
+              identifier: 'race',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please select an ethnicity.'
+                }
+              ]
+            },
             tracks: {
               identifier: 'tracks',
               rules: [
@@ -163,15 +189,42 @@ angular.module('reg')
                 }
               ]
             },
-            adult: {
-              identifier: 'adult',
+            experience: {
+              identifier: 'experience',
               rules: [
                 {
-                  type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  type: 'empty',
+                  prompt: 'Please choose a track that you are most interested in.'
                 }
               ]
-            }
+            },
+            background: {
+              identifier: 'background',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Briefly describe your background in computer science. What kinds of programming experiences have you had?'
+                }
+              ]
+            },
+            proud: {
+              identifier: 'proud',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'What\'s something you\'ve made that you\'re proud of?'
+                }
+              ]
+            },
+            whyivyhacks: {
+              identifier: 'whyivyhacks',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Why do you want to participate in IvyHacks 2020?'
+                }
+              ]
+            },
           }
         });
       }

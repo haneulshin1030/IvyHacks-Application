@@ -291,6 +291,9 @@ angular.module('reg')
                 name: 'Gender',
                 value: user.profile.gender
               }, {
+                name: 'Ethnicity',
+                value: user.profile.ethnicity
+              }, {
                 name: 'School',
                 value: user.profile.school
               }, {
@@ -305,9 +308,6 @@ angular.module('reg')
               }, {
                 name: 'Tracks',
                 value: user.profile.tracks
-              }, {
-                name: 'Description',
-                value: user.profile.description
               }, {
                 name: 'Background',
                 value: user.profile.background
